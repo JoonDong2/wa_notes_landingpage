@@ -182,6 +182,7 @@
     </div>
 
     <script>
+        let touch_processing = false;
         let store_touched = false;
         let isOther = false;
 
@@ -190,14 +191,18 @@
 
         function touch_appstore(event) {
             try {
-                if(!store_touched && !isOther) {
-                    store_touched = true;
-                }
-                else {
+                if(!!touch_processing) {
+                    touch_processing = false;
                     return
                 }
+                touch_processing = true;
+
+                if(!store_touched && !isOther) {
+                    store_touched = true;
+                    gtag('event', 'touch_app_store');
+                }
                 
-                gtag('event', 'touch_app_store');
+                
                 var win = window.open("https://apps.apple.com/kr/app/id1551315623", '_blank');
                 win.focus();
             } catch(e) {}
@@ -205,17 +210,17 @@
 
         function touch_playstore(event) {
             try {
-                if(!store_touched && !isOther) {
-                    store_touched = true;
-                }
-                else {
+                if(!!touch_processing) {
+                    touch_processing = false;
                     return
                 }
+                touch_processing = true;
+                
+                store_touched = true;
 
                 alert("심사중입니다.");
                 return;
 
-                gtag('event', 'touch_play_store');
                 if(!store_touched && !isOther) {
                     store_touched = true;
                     gtag('event', 'touch_play_store');
