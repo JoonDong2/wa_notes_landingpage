@@ -191,17 +191,17 @@
         function touch_appstore(event) {
             if(!store_touched && !isOther) {
                 store_touched = true;
-                
             }
             else {
                 return
             }
             event.preventDefault();
-            
-            try {
-                
-                gtag('event', 'touch_app_store');
 
+            try {
+                alert("심사중입니다.");
+                return
+
+                gtag('event', 'touch_app_store');
                 var win = window.open("https://apps.apple.com/kr/app/id1551315623", '_blank');
                 win.focus();
             } catch(e) {}
