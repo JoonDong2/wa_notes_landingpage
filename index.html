@@ -190,45 +190,38 @@
         function gtag(){dataLayer.push(arguments);}
 
         function touch_appstore(event) {
-            try {
-                if(!!touch_processing) {
-                    touch_processing = false;
-                    return
-                }
-                touch_processing = true;
+            if(!!touch_processing) {
+                touch_processing = false;
+                return
+            }
 
-                if(!store_touched && !isOther) {
-                    store_touched = true;
-                    gtag('event', 'touch_app_store');
-                }
-                
-                
-                var win = window.open("https://apps.apple.com/kr/app/id1551315623", '_blank');
-                win.focus();
-            } catch(e) {}
+            if(!store_touched && !isOther) {
+                store_touched = true;
+                gtag('event', 'touch_app_store');
+            }
+            
+            
+            var win = window.open("https://apps.apple.com/kr/app/id1551315623", '_blank');
+            win.focus();
         }
 
         function touch_playstore(event) {
-            try {
-                if(!!touch_processing) {
-                    touch_processing = false;
-                    return
-                }
-                touch_processing = true;
-                
+            if(!!touch_processing) {
+                touch_processing = false;
+                return
+            }
+            touch_processing = true;
+
+            alert("심사중입니다.");
+            return;
+
+            if(!store_touched && !isOther) {
                 store_touched = true;
+                gtag('event', 'touch_play_store');
+            }
 
-                alert("심사중입니다.");
-                return;
-
-                if(!store_touched && !isOther) {
-                    store_touched = true;
-                    gtag('event', 'touch_play_store');
-                }
-
-                var win = window.open("https://play.google.com/store/apps/details?id=com.joondong.notes", '_blank');
-                win.focus();
-            } catch(e) {}
+            var win = window.open("https://play.google.com/store/apps/details?id=com.joondong.notes", '_blank');
+            win.focus();
         }
 
         function checkMobile(){
