@@ -189,12 +189,18 @@
         function gtag(){dataLayer.push(arguments);}
 
         function touch_appstore(event) {
+            if(!store_touched && !isOther) {
+                store_touched = true;
+                
+            }
+            else {
+                return
+            }
+            event.preventDefault();
+            
             try {
-                event.preventDefault();
-                if(!store_touched && !isOther) {
-                    store_touched = true;
-                    gtag('event', 'touch_app_store');
-                }
+                
+                gtag('event', 'touch_app_store');
 
                 var win = window.open("https://apps.apple.com/kr/app/id1551315623", '_blank');
                 win.focus();
@@ -202,10 +208,18 @@
         }
 
         function touch_playstore(event) {
+            if(!store_touched && !isOther) {
+                store_touched = true;
+            }
+            else {
+                return
+            }
+            event.preventDefault();
+
             alert("심사중입니다.");
             return;
             try {
-                event.preventDefault();
+                gtag('event', 'touch_play_store');
                 if(!store_touched && !isOther) {
                     store_touched = true;
                     gtag('event', 'touch_play_store');
