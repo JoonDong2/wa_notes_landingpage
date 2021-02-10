@@ -279,14 +279,14 @@
             if(mobile === "android") {
                 setTimeout(() => {
                     force_store("market://details?id=com.joondong.notes");
-                }, 1500);
+                }, 3000);
                 playstore.style.display = "block";
                 document.getElementById("playstore-image").style.height = `${Math.min(window.innerHeight * 0.085, 100)}px`;
             } 
             else if(mobile === "ios") {
                 setTimeout(() => {
                     force_store("https://apps.apple.com/kr/app/id1551315623");
-                }, 1500);
+                }, 3000);
                 appstore.style.display = "block";
                 document.getElementById("appstore-image").style.height = `${Math.min(window.innerHeight * 0.085, 100)}px`;
             }
