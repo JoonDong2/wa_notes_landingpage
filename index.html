@@ -23,9 +23,9 @@
     <meta property="og:image" content="./logo.png">
 
     <link rel="stylesheet" type="text/css" href="./reset.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./lib/swiper-bundle.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Jua&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
     
     <style>
         body {
@@ -86,23 +86,22 @@
         .title {
             width: 100%;
             text-align: center;
-            margin-bottom: 5px;
             color: #e87c7c;
             font-family: 'Do Hyeon', sans-serif;
         }
         .desc {
             width: 100%;
             text-align: center;
-            color: #333;
-            font-family: 'Jua', sans-serif;
+            color: #666;
+            font-family: 'Do Hyeon', sans-serif;
         }
     </style>
 </head>
 <body onload="onload()" oncontextmenu="return false" ondragstart="return false" onselectstart="return false">
     <div id="container" class="container">
         <div>
-            <p id="title" class="title">노트를 만들어 볼까요</p>
-            <p id="desc" class="desc">다양한 색의 노트를<br>만들고 편집할 수 있습니다.</p>
+            <p id="title" class="title">귀요미 노트</p>
+            <p id="desc" class="desc"> </p>
         </div>
         
         <!-- Slider main container -->
@@ -244,24 +243,24 @@
         }
         
         var descriptions = [{
-            title: "노트를 만들어 볼까요",
-            desc: "다양한 색의 노트를<br>만들고 편집할 수 있습니다.",
+            title: "귀요미 노트",
+            desc: " ",
             color: "#e87c7c"
         }, {
-            title: "확 들어오는 인터페이스",
-            desc: "중요도, 메모, 문제 사진을<br>편하게 확인할 수 있습니다.",
+            title: "꽉꽉 채우기",
+            desc: "오려붙인 것처럼..",
             color: "#f5bd45"
         }, {
-            title: "있을 건 다 있다.",
-            desc: "사진 촬영, 가져오기, 편집<br>문제 슬라이드 기능까지",
+            title: "문제 자르기",
+            desc: " ",
             color: "#72cc4e"
         }, {
-            title: "실제로 이렇게 사용",
-            desc: "사진 촬영, 가져오기, 편집<br>문제 슬라이드 기능까지",
+            title: "다양한 기능",
+            desc: " ",
             color: "#7C84E8"
         }, {
-            title: "슬라이드 기능",
-            desc: "좌우로 슬라이드하여<br>다음 문제로 넘어가 보세요.",
+            title: "슬라이드",
+            desc: "넘기면서 풀어나가기~",
             color: "#d87ce8"
         }]
 
@@ -330,9 +329,9 @@
             container.style.alignItems = "center";
             container.style.flexDirection = "column";
 
-            document.getElementById("title").style.fontSize = `${window.innerHeight * 0.045}px`;
-            document.getElementById("desc").style.fontSize = `${window.innerHeight * 0.028}px`;
-            document.getElementById("desc").style.lineHeight = `${window.innerHeight * 0.031}px`;
+            document.getElementById("title").style.fontSize = `${window.innerHeight * 0.07}px`;
+            document.getElementById("desc").style.height = `${window.innerHeight * 0.013}px`;
+            document.getElementById("desc").style.fontSize = `${window.innerHeight * 0.018}px`;
 
             document.getElementById("swiper-container").style.height = `${window.innerHeight * 0.75}px`;
             document.getElementById("iphone-container").style.height = `${window.innerHeight * 0.75}px`;
@@ -344,6 +343,6 @@
             }
         }
     </script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./lib/swiper-bundle.min.js"></script>
 </body>
 </html>
