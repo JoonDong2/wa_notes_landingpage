@@ -280,23 +280,23 @@
                 //     force_store("market://details?id=com.joondong.notes");
                 // }, 3000);
                 playstore.style.display = "block";
-                document.getElementById("playstore-image").style.height = `${Math.min(window.innerHeight * 0.085, 100)}px`;
+                document.getElementById("playstore-image").style.height = `${Math.min(window.innerHeight * 0.085, 85)}px`;
             } 
             else if(mobile === "ios") {
                 // setTimeout(() => {
                 //     force_store("https://apps.apple.com/kr/app/id1551315623");
                 // }, 3000);
                 appstore.style.display = "block";
-                document.getElementById("appstore-image").style.height = `${Math.min(window.innerHeight * 0.085, 100)}px`;
+                document.getElementById("appstore-image").style.height = `${Math.min(window.innerHeight * 0.1, 85)}px`;
             }
             else {
                 isOther = true;
                 playstore.style.display = "block";
-                document.getElementById("playstore-image").style.height = `${Math.min(window.innerHeight * 0.085, 100)}px`;
+                document.getElementById("playstore-image").style.height = `${Math.min(window.innerHeight * 0.085, 85)}px`;
                 
                 const appstore = document.getElementById("appstore");
                 appstore.style.display = "block";
-                document.getElementById("appstore-image").style.height = `${Math.min(window.innerHeight * 0.085, 100)}px`;
+                document.getElementById("appstore-image").style.height = `${Math.min(window.innerHeight * 0.085, 85)}px`;
 
                 document.getElementById("dummy").style.display = "block";
             }
